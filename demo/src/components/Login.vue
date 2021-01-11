@@ -33,9 +33,16 @@ export default {
         },
         methods: {
            // 这是点击登陆按钮的事件处理方法
-            login: function() {
                 // 这里要跳转路由
                 // 然后用到 leancloud 验证登陆
+            login () {
+                let username = this.username;        
+                let password = this.password;
+                AV.User.logIn(username,password).then((loginedUser) => {
+                    this.$router.push('/home')
+                }).catch(error => {
+                    console.log(error);
+                })
             }
         }
 }
