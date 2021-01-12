@@ -15,7 +15,7 @@
         <h2>登陆</h2>
         <input v-model="username" type="username" class="form-control" placeholder="username" required autofocus>
         <input v-model="password" class="form-control" type="password" placeholder="Password" required> 
-        <button v-on:click="login" type="submit">登陆</button>
+        <button v-on:click="login" type="submit">提交</button>
     </form>
 </div>
 </template>
@@ -39,7 +39,7 @@ export default {
                 let username = this.username;        
                 let password = this.password;
                 AV.User.logIn(username,password).then((loginedUser) => {
-                    this.$router.push('/home')
+                    this.$router.push({ path: "/home"})
                 }).catch(error => {
                     console.log(error);
                 })
