@@ -38,6 +38,13 @@
                 todo.set('name', '张佳');
                 todo.set('age', 19);
 
+                // 添加一组完整的json数据
+                todo.set('name', 'Tom');
+                todo.set('age',  22);
+                let addr = {"city": '成都', "address": '成都市梦想中心', "storeId": '10066'};
+                todo.set('address', addr)
+                todo.save();
+
 
 
                 //将对象保存到云端

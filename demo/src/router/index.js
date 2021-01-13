@@ -10,13 +10,13 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    // {
+    //   path: '/',
+    //   name: 'QueryText',
+    //   component: QueryText
+    // },
     {
       path: '/',
-      name: 'QueryText',
-      component: QueryText
-    },
-    {
-      path: '/textt',
       name: 'Textt',
       component: Textt
     },
