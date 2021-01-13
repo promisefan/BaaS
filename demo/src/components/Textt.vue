@@ -27,10 +27,18 @@
                 //构建对象
                 let todo = new Todo1();// 为该类创建一个新的实例
 
-                //为属性赋值
-                todo.set('title', '马拉松');
-                todo.set('priority', 26);
-                todo.set('name', '火锅' );
+                //为属性赋值： AA:每次只能添加最新的一条数据，保证数据不丢失，每次只添加一条数据
+                
+                todo.set('name', '张浩');
+                todo.set('age', 20)
+                todo.set('name', '李明');
+                todo.set('age', 21);            
+                todo.set('name', '李洋');
+                todo.set('age', 20);
+                todo.set('name', '张佳');
+                todo.set('age', 19);
+
+
 
                 //将对象保存到云端
                 todo.save().then((todo) => {
@@ -71,7 +79,7 @@
            //删除对象较为敏感，需要结合权限来进行，阻止未经授权的操作
             //删除整个对象
             deleteObject(){
-                const todo = AV.Object.createWithoutData('Todo1', '5ffd3d4f989c9a69c0f2f10f');
+                const todo = AV.Object.createWithoutData('Todo1', '5ffd3d4e1862270b0e1bdccb');
                 todo.destroy()
             },
 
