@@ -57,7 +57,8 @@ import AV from 'leancloud-storage' ;
                 user.signUp().then((user) =>{
                     console.log(`注册成功，${user.id}`);
                 }).catch((error) => {
-                    console.log(error);
+                    // console.log(error);
+                    alert(error)
                 })
 
 

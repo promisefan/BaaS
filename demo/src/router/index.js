@@ -6,27 +6,28 @@ import Login from '@/components/Login'
 import Home from '@/components/Home'
 import Textt from '@/components/Textt'
 import QueryText from '@/components/QueryText'
+import Reset from '@/components/Reset'
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'QueryText',
-    //   component: QueryText
-    // },
+    {
+      path: '/queryText',
+      name: 'QueryText',
+      component: QueryText
+    },
     {
       path: '/textt',
       name: 'Textt',
       component: Textt
     },
     {
-      path: '/login',
+      path: '/',
       name: 'Login',
       component: Login
     },
     {
-        path: '/',
+        path: '/signup',
         name: 'Signup',
         component: Signup
     },
@@ -34,6 +35,12 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/reset',
+      name: 'Reset',
+      component: Reset
     }
+
   ]
 })
