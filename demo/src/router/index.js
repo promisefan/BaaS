@@ -7,6 +7,7 @@ import Home from '@/components/Home'
 import Textt from '@/components/Textt'
 import QueryText from '@/components/QueryText'
 import Reset from '@/components/Reset'
+import File from '@/components/File'
 Vue.use(Router)
 
 export default new Router({
@@ -22,7 +23,7 @@ export default new Router({
       component: Textt
     },
     {
-      path: '/',
+      path: '/login',
       name: 'Login',
       component: Login
     },
@@ -40,6 +41,11 @@ export default new Router({
       path: '/reset',
       name: 'Reset',
       component: Reset
+    },
+    {
+      path: '/',
+      name: 'File',
+      component: File
     }
 
   ]

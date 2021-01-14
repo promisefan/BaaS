@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import AV from 'leancloud-storage' ;
+import AV from 'leancloud-storage' ; //leanCloud项目初始化
 
 Vue.config.productionTip = false
 
@@ -15,8 +15,8 @@ new Vue({
   template: '<App/>'
 })
 
+//leanCloud项目初始化
 AV.init({
-
 appId:"QHEceQRyklNcO8EYnEUR7M7t-9Nh9j0Va",
 appKey:"N5pjcmJ8sHRYG0VDwN4hKlP9",
 serverURL:"https://qheceqry.lc-cn-e1-shared.com"
