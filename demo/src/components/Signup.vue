@@ -43,16 +43,30 @@ import AV from 'leancloud-storage' ;
                 var user = new AV.User();
             // 用 leancloud 提供的方法让 leancloud 自己管理账号密码邮箱
             // 我们只要提供这些值就可以了
+               
+               //设置姓名，密码，邮箱，手机号等是AV.User固有属性
+                // user.setUsername('Tom');
+                // user.setPassword('qwe123');
+                // user.setEmail('tomyuyu@qq.com');
                 user.setUsername(username);
                 user.setPassword(password);
                 user.setEmail(email);
 
-                //leanCloud提供了注册的方法
-                user.signUp().then((loginedUser)=>{
-                    this.$router.push('/home')
-                }).catch(error => {
+                //添加其他属性
+                // user.set('gender', '男');
+                user.signUp().then((user) =>{
+                    console.log(`注册成功，${user.id}`);
+                }).catch((error) => {
                     console.log(error);
                 })
+
+
+                //leanCloud提供了注册的方法
+                // user.signUp().then((loginedUser)=>{
+                //     this.$router.push('/home')
+                // }).catch(error => {
+                //     console.log(error);
+                // })
             }
         }
     }

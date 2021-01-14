@@ -16,7 +16,7 @@ export default new Router({
     //   component: QueryText
     // },
     {
-      path: '/',
+      path: '/textt',
       name: 'Textt',
       component: Textt
     },
@@ -26,7 +26,7 @@ export default new Router({
       component: Login
     },
     {
-        path: '/signup',
+        path: '/',
         name: 'Signup',
         component: Signup
     },
